@@ -2,3 +2,4 @@ __pycache__
 *.kml
 footprints.py
 strava_*.py
+gpxinfo.py
