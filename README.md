@@ -25,6 +25,14 @@ See [my blog post](https://www.benmayersohn.com/2019/03/made-in-the-shade/) for 
 
 **Note**: The formula is an oversimplification. First, we disregard the effect of local changes in elevation (e.g. hills) on this value. Second, as mentioned above, we’re going to assume the worst case scenario (no clouds), as we cannot predict cloud positions on race day. Lastly, and most importantly, we do not include trees, buildings, or any other possible local sources of shade. This again ties into the worst case scenario where the only shadows are the ones cast by the runners.
 
+### Installation
+
+To install `shadegpx`, just use
+
+```bash
+python setup.py install
+```
+
 ### Files
 
 Here is the structure of our repository:
