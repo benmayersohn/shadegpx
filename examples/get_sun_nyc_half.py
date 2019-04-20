@@ -1,17 +1,11 @@
-import matplotlib
-matplotlib.use('Qt5Agg')
-import os
 import matplotlib.pyplot as plt
 import datetime
 from pytz import timezone
 from datetime import timedelta
-import sys
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import shadegpx
+from shadegpx import shadegpx
 
 filename = 'NYC-Half-2019.gpx'
-tz = timezone('EST')
+tz = timezone('US/Eastern')
 start_time = datetime.datetime(2018, 3, 17, 7, 30, tzinfo=tz)  # 7:30 AM EST
 end_time = start_time + timedelta(hours=2, minutes=30)  # 2.5 hrs of cheering
 

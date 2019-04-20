@@ -27,6 +27,20 @@ See [my blog post](https://www.benmayersohn.com/2019/03/made-in-the-shade/) for 
 
 ### Files
 
+Here is the structure of our repository:
+<pre class="language-bash"><code class="language-bash">
+shadegpx
+|____badangle.jpg           # good shot photo shade in front of the runner
+|____goodangle.jpg          # bad photo with a lot of harsh sunlight in the runner's face
+|____examples               # examples of GPX files, scripts to calculate shade factors, and output plots
+|____shadegpx            
+| |____shadegpx.py          # contains tools for computing shade factor
+|____setup.py               # for installation purposes
+|____output                 # directory with output of simulations
+|____README.md
+|____download_race_gpx.py   # script for downloading GPX file from race URL on Strava
+</code></pre>
+
 The file `shadegpx.py` contains two functions: `shade_factor`, which computes the above metric using the required parameters; and `shade_calc` which takes a GPX file, start time, and end time and returns the average shade factor at each coordinate over the specified duration.
 
 My code makes use of the wonderful [PySolar](https://pysolar.readthedocs.io/en/latest/) library to calculate the sun elevation and azimuth at each time.

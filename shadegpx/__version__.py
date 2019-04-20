@@ -1,0 +1,7 @@
+__title__ = 'shadegpx'
+__description__ = 'Compute "shade factor" on a runner during a race using GPX data and solar positions.'
+__url__ = 'https://www.github.com/benmayersohn'
+__version__ = '0.0.1'
+__author__ = 'Ben Mayersohn'
+__author_email__ = 'contact@benmayersohn.com'
+__copyright__ = 'Copyright 2019 Ben Mayersohn'

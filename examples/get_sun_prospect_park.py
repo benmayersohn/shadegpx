@@ -1,17 +1,11 @@
-import matplotlib
-matplotlib.use('Qt5Agg')
-import os
 import matplotlib.pyplot as plt
 import datetime
 from pytz import timezone
 from datetime import timedelta
-import sys
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import shadegpx
+from shadegpx import shadegpx
 
 filename = 'prospectpark.gpx'
-tz = timezone('EST')
+tz = timezone('US/Eastern')
 start_time = datetime.datetime(2018, 2, 17, 10, tzinfo=tz)  # 10 AM EST
 end_time = start_time + timedelta(hours=1, minutes=30)  # 1.5 hrs of cheering
 

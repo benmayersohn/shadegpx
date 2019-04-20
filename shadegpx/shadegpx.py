@@ -3,6 +3,7 @@ import numpy as np
 import pysolar.solar as solar
 from datetime import timedelta
 
+
 def shade_factor(lat_deg, lon_deg, dx, dy, t):
     altitude = np.pi * solar.get_altitude(lat_deg, lon_deg, t) / 180.
     azimuth = np.pi * solar.get_azimuth(lat_deg, lon_deg, t) / 180.
@@ -11,7 +12,8 @@ def shade_factor(lat_deg, lon_deg, dx, dy, t):
     theta_a[dx < 0] = np.pi - np.arctan2(dy[dx < 0], np.abs(dx[dx < 0]))
     return 0.5 * (1 - np.sin(theta_a + azimuth)) * np.cos(altitude)
 
-def shade_calc(filename, start_time, end_time):
+
+def shade_calc(filename, start_time, end_time, return_xy=True):
 
     # open GPX
     with open(filename) as the_file:
@@ -75,4 +77,7 @@ def shade_calc(filename, start_time, end_time):
     
     avg_color = np.mean(colors, axis=0)
 
-    return x, y, avg_color
+    if return_xy:
+        return x, y, avg_color
+    
+    return lons, lats, avg_color
