@@ -36,8 +36,7 @@ python setup.py install
 ### Files
 
 Here is the structure of our repository:
-<pre class="language-bash"><code class="language-bash">
-shadegpx
+<pre class="language-bash"><code class="language-bash">shadegpx
 |____badangle.jpg           # good shot photo shade in front of the runner
 |____goodangle.jpg          # bad photo with a lot of harsh sunlight in the runner's face
 |____examples               # examples of GPX files, scripts to calculate shade factors, and output plots
