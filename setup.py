@@ -13,7 +13,7 @@ REQUIRES_PYTHON = '>=3.6.0'
 VERSION = None
 
 # What packages are required for this module to be executed?
-REQUIRED = ['matplotlib>=3.0', 'pandas>=0.24', 'scipy>=1.2', 'seaborn>=0.9', 'numpy>=1.16', 'pysolar==0.8',
+REQUIRED = ['matplotlib>=3.0', 'pandas>=0.24', 'scipy>=1.2', 'seaborn>=0.9', 'numpy>=1.16', 'pysolar>=0.8',
             'pytz>=2018', 'gpxpy>=1.3', 'requests>=2.21']
 
 here = os.path.abspath(os.path.dirname(__file__))

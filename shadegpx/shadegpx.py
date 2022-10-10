@@ -26,7 +26,7 @@ def shade_calc(filename, start_time, end_time, return_xy=True):
     lon_deg = np.array([points[i].longitude for i in range(num_trackpoints)])
     lats = np.pi * lat_deg / 180.
     lons = np.pi * lon_deg / 180.
-    elevations = np.array([points[i].elevation for i in range(num_trackpoints)])  # in meters
+    elevations = np.array([points[i].elevation if points[i].elevation else 0 for i in range(num_trackpoints)], dtype=float)  # in meters
 
     # convert elevations to miles
     # these are insignificant
